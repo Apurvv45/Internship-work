@@ -1,5 +1,4 @@
 
-```md
 # Internship Work Repository
 
 ## Overview
@@ -159,7 +158,7 @@ This repository will be updated regularly with new projects, improvements, and n
 
 ## Note
 This repository is maintained for **internship documentation, academic learning, and portfolio development**.
-```
+
 
 
 * Make a **short academic version**
