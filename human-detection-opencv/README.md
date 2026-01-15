@@ -1,10 +1,3 @@
-```
-internship-work/human-detection-opencv/README.md
-```
-
----
-
-```md
 # Live Human Detection Using OpenCV
 
 ## Description
@@ -67,6 +60,6 @@ human-detection-opencv/
 - Activity recognition
 - Alert system integration
 - Model optimization for better performance
-```
+
 
 
