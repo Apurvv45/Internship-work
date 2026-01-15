@@ -1,4 +1,4 @@
-```md
+
 # ArUco Marker Overlay Projects (Webcam & Video)
 
 ## Description
@@ -54,5 +54,5 @@ Aruco-overlay/
 - Multiple marker support
 - Improved overlay accuracy
 - Performance optimization
-```
+
 
