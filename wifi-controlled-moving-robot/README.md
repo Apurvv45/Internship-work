@@ -27,10 +27,10 @@ This project demonstrates a WiFi-controlled moving robot car using a microcontro
 ## Sample Output
 
 ### Robot Car
-![Moving Robot Car](moving_robot.jpeg)
+![Moving Robot Car](images/moving_robot.jpeg)
 
 ### Blynk IoT Control Interface
-![Blynk IoT Template](RobotCar-BlynkIOT_Template.png)
+![Blynk IoT Template](images/RobotCar-BlynkIOT_Template.png)
 
 
 ## Files Included
