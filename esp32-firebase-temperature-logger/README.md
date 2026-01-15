@@ -1,4 +1,4 @@
-```md
+
 # 🌡️ ESP32 Firebase Temperature Logger
 
 An **ESP32-based IoT project** that reads temperature data from a sensor and logs it to **Firebase** in real time.  
@@ -95,5 +95,4 @@ SPPU (Savitribai Phule Pune University)
 ## 📜 License
 
 This project is intended for **educational purposes only**.
-```
 
