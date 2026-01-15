@@ -161,9 +161,3 @@ This repository is maintained for **internship documentation, academic learning,
 
 
 
-* Make a **short academic version**
-* Add **badges**
-* Add **weekly progress section**
-* Optimize for **placements**
-
-Just tell me 👍
