@@ -182,13 +182,6 @@ String authorizedTokens[] = { "32ADCF55", "A1B2C3D4" };
 
 ---
 
-## 👨‍💻 Author
-
-**Dhananjay Shinde**
-Third Year Computer Engineering Student
-SPPU (Savitribai Phule Pune University)
-
----
 
 ## 📜 License
 
