@@ -94,8 +94,8 @@ Each command is executed **instantly** with smooth servo movement.
 
 ---
 
-
-![Humanoid Robot Control Panel](Images/image.jfif)
+## Astor Overview
+![Astor Humanoid Robot](Images/robot.jfif)
 
 ---
 
