@@ -23,20 +23,19 @@ hd44780_I2Cexp lcd;
 char ssid[] = "wifixxxx";
 char pass[] = "pass@123";
 
-// L298N Motor Pins
+
 #define LM_L1 26
 #define LM_L2 27
 #define RM_L1 14
 #define RM_L2 12
 
-// Sensors
 #define LDR_L 34
 #define LDR_R 35
 #define TEMP_PIN 32
 #define TRIG 25
 #define ECHO 33
 
-int mode = 0;   // 0 = MANUAL, 1 = AUTO
+int mode = 0;   
 
 
 void forward() {
@@ -67,7 +66,6 @@ void right() {
   digitalWrite(RM_L2, LOW);
 }
 
-// ---------------- ULTRASONIC ----------------
 long distanceCM() {
   digitalWrite(TRIG, LOW);
   delayMicroseconds(2);
@@ -78,14 +76,12 @@ long distanceCM() {
   return d * 0.034 / 2;
 }
 
-// ---------------- TEMPERATURE (LM35) ----------------
 float readTemp() {
   int val = analogRead(TEMP_PIN);
   float voltage = val * (3.3 / 4095.0);
   return voltage * 100;
 }
 
-// ---------------- BLYNK CONTROLS ----------------
 BLYNK_WRITE(V0) { if (!mode && param.asInt()) forward(); }
 BLYNK_WRITE(V1) { if (!mode && param.asInt()) stopMotor(); }
 BLYNK_WRITE(V2) { if (!mode && param.asInt()) left(); }
@@ -93,7 +89,7 @@ BLYNK_WRITE(V3) { if (!mode && param.asInt()) right(); }
 BLYNK_WRITE(V4) { if (!mode && param.asInt()) stopMotor(); }
 BLYNK_WRITE(V5) { mode = param.asInt(); }
 
-// ---------------- SETUP ----------------
+
 void setup() {
   Serial.begin(9600);
   delay(1000);
@@ -107,10 +103,8 @@ void setup() {
   pinMode(TRIG, OUTPUT);
   pinMode(ECHO, INPUT);
 
-  // I2C init
   Wire.begin(21, 22);
 
-  // LCD init (auto address detect)
   lcd.begin(16, 2);
   lcd.backlight();
   lcd.print("Robot Starting");
@@ -119,7 +113,6 @@ void setup() {
   Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
 }
 
-// ---------------- LOOP ----------------
 void loop() {
   Blynk.run();
 
