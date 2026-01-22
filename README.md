@@ -5,7 +5,6 @@
 This repository contains projects, mini-projects, and technical skills developed during my internship.  
 The work covers **Embedded Systems, IoT, Robotics, Computer Vision, Machine Learning**, and **3D Printing Technology**.
 
-This repository is **continuously updated** as the internship progresses.
 
 ---
 
@@ -20,6 +19,7 @@ internship-work/
 ├── human-detection-opencv/
 ├── Smart-Home-System/
 ├── wifi-controlled-moving-robot/
+├── Humanoid-robot/
 └── README.md
 
 ```
@@ -170,6 +170,11 @@ This repository is updated with new projects, improvements, and newly learned te
 - Professional project documentation using GitHub
 
 ---
+
+## Team Members
+- Dhananjay Shinde
+- Apurv Surwase
+- Sangharsh Jadhav
 
 ## Note
 This repository is maintained for **internship documentation, academic learning, and portfolio development**.
