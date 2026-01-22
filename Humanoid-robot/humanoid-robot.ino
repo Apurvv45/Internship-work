@@ -16,7 +16,6 @@ WebServer server(80);
 
 bool paradeMode = false;
 
-/* ===== INITIAL ANGLES (UNCHANGED) ===== */
 int servoAngles[16] = {
   65, 60, 90, 20, 90, 20, 90, 140,
   90, 20, 90, 90, 90, 90, 90, 90
@@ -28,7 +27,6 @@ const char* servoNames[16] = {
   "R_Leg", "R_Knee", "L_Leg", "L_Knee", "Servo14", "Servo15"
 };
 
-/* ===== BASIC SERVO CONTROL ===== */
 void setServoAngle(uint8_t ch, int angle) {
   angle = constrain(angle, 0, 180);
   servoAngles[ch] = angle;
@@ -50,7 +48,6 @@ void moveServoSmooth(uint8_t ch, int target, int delayMs) {
   }
 }
 
-/* ===== RESET (UNCHANGED LOGIC) ===== */
 void resetPose() {
   paradeMode = false;
   moveServoSmooth(1, 90, 8);
@@ -67,7 +64,6 @@ void resetPose() {
   moveServoSmooth(12, 90, 8);
 }
 
-/* ===== SALUTE (SLIGHTLY CLEANED, SAME INTENT) ===== */
 void performSalute() {
   moveServoSmooth(2, 80, 8);
   moveServoSmooth(3, 120, 8);
@@ -75,7 +71,6 @@ void performSalute() {
   moveServoSmooth(5, 135, 8);
 }
 
-/* ===== CORRECT BICEPS FLEX ===== */
 void flexBiceps() {
   moveServoSmooth(2, 70, 8);
   moveServoSmooth(6, 110, 8);
@@ -87,7 +82,6 @@ void flexBiceps() {
   moveServoSmooth(8, 30, 8);
 }
 
-/* ===== CORRECT RIGHT HAND WAVE ===== */
 void waveRightHand() {
   moveServoSmooth(2, 70, 8);
   moveServoSmooth(3, 120, 8);
@@ -100,22 +94,19 @@ void waveRightHand() {
   resetPose();
 }
 
-/* ===== CORRECT DIAGONAL PARADE ===== */
 void paradeStep() {
 
   int speed = 10;
   int swing = 35;   
 
-  // ===== PHASE 1: Right arm + Left leg forward =====
   for (int i = 0; i <= swing; i++) {
-    setServoAngle(2, 90 + i);   // Right shoulder forward
-    setServoAngle(12, 90 - i);  // Left leg forward
+    setServoAngle(2, 90 + i);   
+    setServoAngle(12, 90 - i);  
     delay(speed);
   }
 
   delay(200);
 
-  // ===== PHASE 2: Back to center =====
   for (int i = swing; i >= 0; i--) {
     setServoAngle(2, 90 + i);
     setServoAngle(12, 90 - i);
@@ -124,16 +115,14 @@ void paradeStep() {
 
   delay(200);
 
-  // ===== PHASE 3: Left arm + Right leg forward =====
   for (int i = 0; i <= swing; i++) {
-    setServoAngle(6, 90 + i);   // Left shoulder forward
-    setServoAngle(10, 90 - i);  // Right leg forward
+    setServoAngle(6, 90 + i);   
+    setServoAngle(10, 90 - i);  
     delay(speed);
   }
 
   delay(200);
 
-  // ===== PHASE 4: Back to center =====
   for (int i = swing; i >= 0; i--) {
     setServoAngle(6, 90 + i);
     setServoAngle(10, 90 - i);
@@ -144,7 +133,6 @@ void paradeStep() {
 }
 
 
-/* ===== WEB UI ===== */
 String htmlPage() {
   String page = "<!DOCTYPE html><html><head>";
   page += "<meta name='viewport' content='width=device-width, initial-scale=1'>";
@@ -190,7 +178,6 @@ String htmlPage() {
   return page;
 }
 
-/* ===== SETUP ===== */
 void setup() {
   Serial.begin(115200);
   Wire.begin();
@@ -216,7 +203,6 @@ void setup() {
   server.begin();
 }
 
-/* ===== LOOP ===== */
 void loop() {
   server.handleClient();
   if (paradeMode) paradeStep();
