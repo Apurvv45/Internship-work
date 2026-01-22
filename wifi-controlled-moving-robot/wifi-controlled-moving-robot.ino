@@ -12,11 +12,11 @@
 #include <BlynkSimpleEsp32.h>
 #include <Wire.h>
 
-// hd44780 I2C LCD library
+
 #include <hd44780.h>
 #include <hd44780ioClass/hd44780_I2Cexp.h>
 
-// LCD object (auto-detect I2C address)
+
 hd44780_I2Cexp lcd;
 
 // WiFi
@@ -38,7 +38,7 @@ char pass[] = "pass@123";
 
 int mode = 0;   // 0 = MANUAL, 1 = AUTO
 
-// ---------------- MOTOR FUNCTIONS ----------------
+
 void forward() {
   digitalWrite(LM_L1, HIGH);
   digitalWrite(LM_L2, LOW);
