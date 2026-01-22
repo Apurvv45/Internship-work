@@ -4,22 +4,20 @@
 #include <MFRC522.h>
 #include <DHT.h>
 
-// ---------- WIFI ----------
 const char* ssid = "WIFI";
 const char* password = "Pass@123";
 const char* serverURL = "http://(YOUR_IP):5000/update";
 
-// ---------- RFID ----------
+
 #define SS_PIN 5
 #define RST_PIN 22
 MFRC522 rfid(SS_PIN, RST_PIN);
 
-// ---------- DHT ----------
+
 #define DHTPIN 27
 #define DHTTYPE DHT11
 DHT dht(DHTPIN, DHTTYPE);
 
-// ---------- SENSORS ----------
 #define GAS_PIN 34
 #define LDR_PIN 32
 #define RAIN_PIN 33
@@ -27,27 +25,22 @@ DHT dht(DHTPIN, DHTTYPE);
 #define LED_PIN 2
 #define BUZZER_PIN 4
 
-// ---------- MOTOR ----------
 #define IN1 16
 #define IN2 17
 #define ENA 25
 
-// ---------- ULTRASONIC ----------
 #define TRIG_PIN 12
 #define ECHO_PIN 14
 
-// ---------- AUTHORIZATION ARRAY ----------
 String authorizedTokens[] = {
   "32ADCF55",
   "A1B2C3D4"
 };
 int tokenCount = 2;
 
-// ---------- GLOBALS ----------
 float temperature = 0;
 unsigned long lastDHTRead = 0;
 
-// ---------- FUNCTIONS ----------
 bool isAuthorized(String uid) {
   for (int i = 0; i < tokenCount; i++) {
     if (uid == authorizedTokens[i]) {
@@ -121,19 +114,16 @@ void loop() {
     rfid.PCD_StopCrypto1();
   }
 
-  // ---------- DHT ----------
   if (millis() - lastDHTRead > 2000) {
     float t = dht.readTemperature();
     if (!isnan(t)) temperature = t;
     lastDHTRead = millis();
   }
 
-  // ---------- GAS ----------
   int gasValue = analogRead(GAS_PIN);
   String gasStatus = gasValue > 2000 ? "Gas Detected" : "Safe";
   digitalWrite(BUZZER_PIN, gasValue > 2000);
 
-  // ---------- FAN ----------
   String fanStatus = "OFF";
   if (temperature > 30) {
     digitalWrite(IN1, HIGH);
@@ -143,20 +133,16 @@ void loop() {
     digitalWrite(IN1, LOW);
     digitalWrite(IN2, LOW);
   }
-
-  // ---------- LDR ----------
+  
   int ldrValue = analogRead(LDR_PIN);
   String ledStatus = ldrValue > 1500 ? "ON" : "OFF";
   digitalWrite(LED_PIN, ldrValue < 1500);
 
-  // ---------- ULTRASONIC ----------
   long distance = readDistance();
 
-  // ---------- RAIN ----------
   int rainValue = analogRead(RAIN_PIN);
   String rainStatus = rainValue < 2500 ? "No Rain" : "No Rain";
 
-  // ---------- DASHBOARD ----------
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
     http.begin(serverURL);
