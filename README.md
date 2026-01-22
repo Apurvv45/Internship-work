@@ -2,7 +2,7 @@
 # Internship Work Repository
 
 ## Overview
-This repository contains projects, mini-projects, and technical skills developed during my internship.  
+This repository contains projects, mini-projects, and technical skills developed during the internship.  
 The work covers **Embedded Systems, IoT, Robotics, Computer Vision, Machine Learning**, and **3D Printing Technology**.
 
 
