@@ -88,7 +88,7 @@ Each command is executed **instantly** with smooth servo movement.
 ---
 
 ## Sample Control Interface
-![Humanoid Robot Control Panel](images/humanoid-controller.png)
+![Humanoid Robot Control Panel](images/dashboard.png)
 
 > The interface allows real-time control of all 14 servos and action buttons.
 
