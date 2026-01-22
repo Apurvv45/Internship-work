@@ -84,13 +84,7 @@ Below is the output of the temperature logger displayed using Firebase:
 
 ---
 
-## 👨‍💻 Author
 
-**Dhananjay Shinde**  
-Third Year Computer Engineering Student  
-SPPU (Savitribai Phule Pune University)
-
----
 
 ## 📜 License
 
