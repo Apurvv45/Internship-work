@@ -94,6 +94,11 @@ Each command is executed **instantly** with smooth servo movement.
 
 ---
 
+
+![Humanoid Robot Control Panel](Images/image.jfif)
+
+---
+
 ## Learning Outcomes
 - Practical experience with humanoid robot design
 - Servo motor synchronization
