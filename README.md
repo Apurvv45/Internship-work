@@ -124,6 +124,21 @@ Smart-Home-System/
 
 ---
 
+### 🔹 Humanoid Robot
+- Fully functional humanoid robot
+- Wireless OTA control using WiFi
+- Web-based control panel
+- Immediate action response
+
+Folder:
+```
+
+Humanoid-robot/
+
+```
+
+---
+
 ## Technologies & Skills Learned
 - Embedded C / Arduino
 - ESP32 & Microcontrollers
@@ -140,8 +155,8 @@ Smart-Home-System/
 ---
 
 ## Internship Status
-**Ongoing**  
-This repository will be updated regularly with new projects, improvements, and newly learned technologies.
+**Completed**  
+This repository is updated with new projects, improvements, and newly learned technologies during the Internship Period.
 
 ---
 
