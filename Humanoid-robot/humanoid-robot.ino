@@ -3,8 +3,8 @@
 #include <WiFi.h>
 #include <WebServer.h>
 
-const char* WIFI_SSID = "PHN-Guest";
-const char* WIFI_PASS = "Phn@77234$";
+const char* WIFI_SSID = "wifi";
+const char* WIFI_PASS = "12345678";
 
 #define PCA_ADDR 0x40
 #define SERVOMIN 150
@@ -104,7 +104,7 @@ void waveRightHand() {
 void paradeStep() {
 
   int speed = 10;
-  int swing = 35;   // 🔥 increased from 20 to 35
+  int swing = 35;   
 
   // ===== PHASE 1: Right arm + Left leg forward =====
   for (int i = 0; i <= swing; i++) {
@@ -144,7 +144,7 @@ void paradeStep() {
 }
 
 
-/* ===== WEB UI (UNCHANGED) ===== */
+/* ===== WEB UI ===== */
 String htmlPage() {
   String page = "<!DOCTYPE html><html><head>";
   page += "<meta name='viewport' content='width=device-width, initial-scale=1'>";
