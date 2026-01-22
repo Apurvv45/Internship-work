@@ -21,7 +21,6 @@ FirebaseConfig config;
 unsigned long lastSendTime = 0;
 const unsigned long sendInterval = 5000;
 
-// -------- Date & Time (SAFE for Firebase keys) --------
 String getDateTimeKey() {
   struct tm timeinfo;
   if (!getLocalTime(&timeinfo)) return "time_error";
@@ -51,7 +50,6 @@ void setup() {
   config.api_key = API_KEY;
   config.database_url = DATABASE_URL;
 
-  // ✅ AUTH FIRST (IMPORTANT)
   if (!Firebase.signUp(&config, &auth, "", "")) {
     Serial.print("Auth failed: ");
     Serial.println(config.signer.signupError.message.c_str());
