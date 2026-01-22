@@ -172,9 +172,15 @@ This repository is updated with new projects, improvements, and newly learned te
 ---
 
 ## Team Members
-- Dhananjay Shinde
-- Apurv Surwase
-- Sangharsh Jadhav
+- Dhananjay Shinde : Backend Development , GitHub Management , Final Integration
+- Apurv Surwase : Frontend UI & Styling , Hardware Support
+- Sangharsh Jadhav : Hardware Integration & System Setup
+
+---
+## Team Contribution Note
+This project was developed collaboratively during a 1-month internship.
+Initial codebase was pushed by a single member due to repo setup timing.
+All members contributed to design, logic, testing, and feature planning
 
 ## Note
 This repository is maintained for **internship documentation, academic learning, and portfolio development**.
