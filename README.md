@@ -26,18 +26,6 @@ internship-work/
 
 ---
 
-## Projects Included
-
-### 🔹 Cat vs Dog Classification using CNN (External Repository)
-- Image classification using Convolutional Neural Networks (CNN)
-- Trained to classify images as **Cat** or **Dog**
-- Includes dataset preprocessing, model training, and GUI-based prediction
-- Demonstrates deep learning fundamentals
-
-🔗 **Repository Link:**  
-https://github.com/Dhananjay-234/cat-dog-cnn-classifier/
-
----
 
 ### 🔹 ESP32 Firebase Temperature Logger
 - Reads temperature data using ESP32
@@ -170,18 +158,6 @@ This repository is updated with new projects, improvements, and newly learned te
 - Professional project documentation using GitHub
 
 ---
-
-## Team Members
-- Dhananjay Shinde : Backend Development , GitHub Management , Final Integration
-- Apurv Surwase : Frontend UI & Styling , Hardware Support
-- Sangharsh Jadhav : Hardware Integration & System Setup
-
----
-## Team Contribution Note
-This project was developed collaboratively during a 1-month internship.
-Initial codebase was pushed by a single member due to repo setup timing.
-All members contributed to design, logic, testing, and feature planning
-
 ## Note
 This repository is maintained for **internship documentation, academic learning, and portfolio development**.
 
