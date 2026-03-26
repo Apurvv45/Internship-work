@@ -9,7 +9,7 @@ This repository contains ArUco marker–based augmented reality projects develop
 - ArUco Image Overlay on Video
 
 ## Folder Structure
-```
+
 
 Aruco-overlay/
 ├── aruco-image-overlay-webcam/
